@@ -21,10 +21,10 @@
             var blogTable = modelBuilder.Entity<Blog>();
             var blogArtticleTable = modelBuilder.Entity<BlogArticle>();
 
-            //blogTable.Property(o => o.Id).IsRequired();
+            
             blogTable.HasKey(o => o.Id);
 
-            //blogArtticleTable.Property(o => o.Id).IsRequired();
+           
             blogArtticleTable.HasKey(o => o.Id);
 
 

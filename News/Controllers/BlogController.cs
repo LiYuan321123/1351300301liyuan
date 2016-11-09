@@ -8,7 +8,7 @@ namespace News.Controllers
 {
     public class BlogController : Controller
     {
-        // GET: Blog
+        
         public ActionResult Index(string q)
         {
             var db = new BlogDatabase();
@@ -37,10 +37,7 @@ namespace News.Controllers
 
         public ActionResult ArticleSave(BlogArticle model)
         {
-            //var article = new BlogArticle();
-            //article.Subject = model.Subject;
-            //article.Body = model.Body;
-            //article.DateCreated = DateTime.Now;
+            
             if (ModelState.IsValid)
                             {
                 var article = new BlogArticle();
@@ -53,9 +50,7 @@ namespace News.Controllers
                 db.SaveChanges();
                             }
 
-            //var db = new BlogDatabase();
-            //db.BlogArticles.Add(article);
-           // db.SaveChanges();
+           
 
             return Redirect("Index");
         }
